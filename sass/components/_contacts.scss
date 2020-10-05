@@ -1,0 +1,24 @@
+.contacts {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  & .link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition: 250ms color cubic-bezier($cubic);
+    // @include for-size(tablet-only)
+    @media screen and (max-width: 1199px) {
+      display: inline-block;
+      margin-top: 8px;
+    }
+  }
+  & .link:hover {
+    text-decoration: none;
+    color: $accent-color;
+  }
+}

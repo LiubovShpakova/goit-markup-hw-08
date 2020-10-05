@@ -1,0 +1,76 @@
+/* особенности */
+.qualities {
+  margin-bottom: 94px;
+  &__item {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  @include for-size(tablet) {
+    &__item {
+      width: calc((100% - 30px) / 2);
+      margin-bottom: 30px;
+    }
+    &__item:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+  }
+
+  @include for-size(desktop) {
+    &__item {
+      width: calc((100% - 3 * 30px) / 4);
+      margin-bottom: 0px;
+    }
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-color: $primary-color;
+  }
+  &__title {
+    display: block;
+    color: $title-text-color;
+    height: 16px;
+    left: 215px;
+    top: 774px;
+    @include font(14px, 1.15, 700);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin: 0px 0px 10px 0px;
+  }
+  &__text {
+    display: block;
+    color: $primary-text-color;
+    height: 75px;
+    left: 215px;
+    top: 800px;
+    @include font(14px, 1.71);
+    letter-spacing: 0.03em;
+    margin: 0px;
+    // @include for-size(desktop) {
+    //   width: 270px;
+    // }
+  }
+}
+
+.main-title {
+  color: $title-text-color;
+  @include font(36px, 1.17, 700);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 0px 0px 50px 0px;
+}
+.menu-list {
+  @include for-size(mobile) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,28 @@
+.logo,
+.logo-footer {
+  text-decoration: none;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  transition: 250ms color cubic-bezier($cubic);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &-accent {
+    color: $accent-color;
+  }
+}
+
+.logo {
+  color: #000000;
+  margin-right: 95px;
+}
+.logo-footer {
+  display: inline-block;
+  color: #ffffff;
+  margin-bottom: 20px;
+}

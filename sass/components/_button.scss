@@ -1,0 +1,99 @@
+.button {
+  color: $title-color;
+  background-color: $accent-color;
+  font-size: 16px;
+  line-height: 1.87;
+  font-weight: bold;
+  width: 200px;
+  height: 50px;
+  left: 700px;
+  top: 430px;
+  border: 0;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 250ms color cubic-bezier($cubic);
+
+  &:hover,
+  &:focus {
+    background-color: $title-color;
+    color: $accent-color;
+    border: 0;
+  }
+}
+.button-portfolio {
+  display: inline-block;
+  color: $title-text-color;
+  background-color: $primary-color;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  height: 38px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+  border: 0;
+  padding: 6px 22px;
+  min-width: 73px;
+  transition: 250ms background-color cubic-bezier($cubic),
+    250ms color cubic-bezier($cubic);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $title-color;
+    background-color: $accent-color;
+  }
+  &.current {
+    color: $title-color;
+    background-color: $accent-color;
+  }
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+  background: $title-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  fill: $title-text-color;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    fill: $accent-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  & .icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+
+  @include for-size(tablet) {
+    display: none;
+  }
+}

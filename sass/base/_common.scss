@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  // outline: 1px solid blue;
+}
+body {
+  background-color: $title-color;
+  font-family: Roboto, sans-serif;
+  overflow: auto;
+  padding-top: 0px !important;
+}
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  // @include for-size(mobile) {
+  //   max-width: 480px;
+  // }
+
+  // @include for-size(tablet) {
+  //   max-width: 768px;
+  // }
+
+  @include for-size(desktop) {
+    width: 1200px;
+  }
+}
+/* шапка */
+.flexbox,
+.work {
+  @include for-size(mobile) {
+    display: flex;
+  }
+}
+.white-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

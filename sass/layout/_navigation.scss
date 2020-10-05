@@ -1,0 +1,19 @@
+.navigation {
+  display: none;
+
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+  @include for-size(desktop) {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+  }
+}
+.nav {
+  @include for-size(tablet-only) {
+    margin-top: 16px;
+  }
+}

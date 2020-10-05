@@ -1,0 +1,68 @@
+/*Постоянные клиенты*/
+.client {
+  margin-top: 60px;
+  @include for-size(desktop) {
+    margin-top: 94px;
+  }
+}
+
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include for-size(desktop) {
+    flex-wrap: nowrap;
+  }
+
+  &__item {
+    height: 90px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    width: calc((100% - 2 * 15px) / 2);
+    @include for-size(tablet-only) {
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+      &:nth-child(2n + 1) {
+        margin-left: 0;
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: calc((100% - 4 * 15px) / 3);
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:nth-child(3n + 1) {
+        margin-left: 0;
+      }
+    }
+    @include for-size(desktop) {
+      width: calc((100% - 5 * 30px) / 6);
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__item &__foto {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    fill: #afb1b8;
+    transition: 250ms border-color cubic-bezier($cubic),
+      250ms fill cubic-bezier($cubic);
+  }
+  &__item:hover,
+  &__item:focus {
+    border-color: $accent-color;
+  }
+  &__item:hover &__foto,
+  &__item:focus &__foto {
+    fill: $accent-color;
+  }
+}
