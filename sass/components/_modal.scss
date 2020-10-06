@@ -1,9 +1,9 @@
 .modal {
   background-color: $title-color;
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, 5%) scale(1);
   max-width: 100%;
   width: 528px;
   min-height: 581px;
