@@ -811,11 +811,8 @@ img {
   .portfolio-list__item:nth-child(2n) {
     margin-right: 0px;
   }
-  .portfolio-list__item:nth-child(8) {
-    margin-bottom: 0px;
-  }
   .portfolio-list__item:nth-last-child(-n + 2) {
-    margin-bottom: 0px;
+    margin-bottom: 30px;
   }
 }
 
